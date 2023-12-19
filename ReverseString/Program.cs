@@ -14,8 +14,9 @@ namespace ReverseString
             Console.Write("Please enter a string to be analyzed: ");
             string userInput = Console.ReadLine().ToLower();
 
-            for(int i = userInput.Length -1; i >= 0; i-- ){
-                reverseInput += userInput[i];
+            for(int i = 0; i < userInput.Length; i++ ){
+                int index = userInput.Length - 1 -i;
+                reverseInput += userInput[index];
             }
 
             bool isInputPalindrome = userInput.Equals(reverseInput);
